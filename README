@@ -1,0 +1,7 @@
+A YUI2 DATATABLE EXAMPLE :  Master-Detail linked Tables
+
+This example demonstrates how to create a dual DataTable (DT) system where record selections from the primary 
+(Master or Parent) DT can be used to re-create a secondary linked (Detail or Child) DT.  
+
+A live working example, fully documented is available here : http://www.blunderalong.com/pub/dt_masterdetail.html
+
