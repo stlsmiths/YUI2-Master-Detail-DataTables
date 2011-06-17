@@ -3,5 +3,14 @@ A YUI2 DATATABLE EXAMPLE :  Master-Detail linked Tables
 This example demonstrates how to create a dual DataTable (DT) system where record selections from the primary 
 (Master or Parent) DT can be used to re-create a secondary linked (Detail or Child) DT.  
 
+The basic data schema is the Master datatable (called parentDT) has a primary key of 'cust_id' and contains summary 
+customer data.  The Detail datatable (called childDT) contains orders linked via a one-to-many relationship through 
+the 'cust_id' key.  As parentDT selections are made (and 'cust_id' changes), a new childDT update request is sent 
+providing the changed 'cust_id' key.
+
+Initially the master table (parentDT) is initially populated with data (from a remote PHP server via JSON data), and 
+the detail table (childDT) has not been created.  A 'rowClickEvent' handler on the master table pulls the 'cust_id' key 
+and either creates the childDT (if it doesn't exist) or updates the childDT (via a .sendRequest).
+  
 A live working example, fully documented is available here : http://www.blunderalong.com/pub/dta/dt_masterdetail.html
 
